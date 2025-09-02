@@ -4,19 +4,22 @@ export const loginAdminUseCase = (dependencies: IAdminDependencies) => {
   const {
     repositories: { adminFindByEmail },
   } = dependencies;
+
   return {
     execute: async (email: string, password: string) => {
       try {
         const admin = await adminFindByEmail(email);
+
+        // If admin not found, return null
         if (!admin) {
-          throw new Error("admin not found ");
+          return null;
         }
 
-        const isPasswordValid = password === admin.password;
-
-        if (!isPasswordValid) {
-          throw new Error("Invalid credentials");
+        // Plain text comparison
+        if (password !== admin.password) {
+          return null;
         }
+
         return admin;
       } catch (error: any) {
         throw new Error(error.message);

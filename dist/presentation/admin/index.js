@@ -15,3 +15,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./controllers/adminLogin"), exports);
+__exportStar(require("./controllers/addVerifiedUser"), exports);
+__exportStar(require("./controllers/getVerifiedUsers"), exports);
+__exportStar(require("./controllers/deleteUser"), exports);
+__exportStar(require("./controllers/user/loginUser"), exports);

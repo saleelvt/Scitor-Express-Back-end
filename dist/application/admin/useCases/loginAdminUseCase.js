@@ -16,12 +16,13 @@ const loginAdminUseCase = (dependencies) => {
         execute: (email, password) => __awaiter(void 0, void 0, void 0, function* () {
             try {
                 const admin = yield adminFindByEmail(email);
+                // If admin not found, return null
                 if (!admin) {
-                    throw new Error("admin not found ");
+                    return null;
                 }
-                const isPasswordValid = password === admin.password;
-                if (!isPasswordValid) {
-                    throw new Error("Invalid credentials");
+                // Plain text comparison
+                if (password !== admin.password) {
+                    return null;
                 }
                 return admin;
             }

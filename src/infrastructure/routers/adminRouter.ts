@@ -3,8 +3,20 @@ import { IAdminDependencies } from './../../application/admin/interfaces/IAdminD
 import { Router } from 'express';
 
 export const adminRoutes = (dependencies: IAdminDependencies) => {
-    const { loginAdmin } = adminController(dependencies);
+    const { loginAdmin,addVerifiedUser,getVerifiedUsers,DeleteVerifiedUser,loginUser } = adminController(dependencies);
     const router = Router();
-    router.route("/login").post(loginAdmin); // No need to change this line.
+    router.route("/login").post(loginAdmin);
+    router.route("/addUser").post(addVerifiedUser);
+    router.route("/getUsers").get(getVerifiedUsers);
+    router.route("/deleteUser/:id").delete(DeleteVerifiedUser);
+
+
+    // user section 
+
+
+        router.route("/userlogin").post(loginUser);
+
+  
+
     return router;
 };
