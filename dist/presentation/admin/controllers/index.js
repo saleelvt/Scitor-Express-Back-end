@@ -6,6 +6,8 @@ const adminLogin_1 = require("./adminLogin");
 const addVerifiedUser_1 = require("./addVerifiedUser");
 const deleteUser_1 = require("./deleteUser");
 const addCourse_1 = require("./addCourse");
+const getCourse_1 = require("./getCourse");
+const getCourseByid_1 = require("./getCourseByid");
 // user imports 
 const loginUser_1 = require("./user/loginUser");
 const adminController = (dependencies) => {
@@ -17,6 +19,8 @@ const adminController = (dependencies) => {
         // user section 
         loginUser: (0, loginUser_1.userLoginController)(dependencies),
         AddCourse: (0, addCourse_1.adminAddCourseController)(dependencies),
+        getCourse: (0, getCourse_1.adminGetCourseController)(dependencies),
+        getCoursebyId: (0, getCourseByid_1.adminGetCoursebyIdController)(dependencies),
     };
 };
 exports.adminController = adminController;

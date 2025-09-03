@@ -5,6 +5,7 @@ import { addVerifiedUserController } from "./addVerifiedUser";
 import { adminDeleteUserController } from './deleteUser';
 import { adminAddCourseController } from './addCourse';
 import { adminGetCourseController } from './getCourse';
+import { adminGetCoursebyIdController } from './getCourseByid';
 
 
 
@@ -30,6 +31,7 @@ export const adminController = (dependencies: IAdminDependencies) => {
 
         AddCourse:adminAddCourseController(dependencies),
         getCourse:adminGetCourseController(dependencies),
+        getCoursebyId:adminGetCoursebyIdController(dependencies),
 
     };
 };
