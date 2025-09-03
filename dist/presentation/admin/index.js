@@ -19,3 +19,4 @@ __exportStar(require("./controllers/addVerifiedUser"), exports);
 __exportStar(require("./controllers/getVerifiedUsers"), exports);
 __exportStar(require("./controllers/deleteUser"), exports);
 __exportStar(require("./controllers/user/loginUser"), exports);
+__exportStar(require("./controllers/addCourse"), exports);

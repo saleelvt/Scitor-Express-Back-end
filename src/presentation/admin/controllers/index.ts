@@ -3,6 +3,8 @@ import { IAdminDependencies } from "@/application/admin/interfaces/IAdminDepende
 import { loginAdminController } from "./adminLogin";
 import { addVerifiedUserController } from "./addVerifiedUser";
 import { adminDeleteUserController } from './deleteUser';
+import { adminAddCourseController } from './addCourse';
+import { adminGetCourseController } from './getCourse';
 
 
 
@@ -24,5 +26,10 @@ export const adminController = (dependencies: IAdminDependencies) => {
         // user section 
 
         loginUser:userLoginController(dependencies),
+
+
+        AddCourse:adminAddCourseController(dependencies),
+        getCourse:adminGetCourseController(dependencies),
+
     };
 };

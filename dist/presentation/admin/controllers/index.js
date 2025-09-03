@@ -5,6 +5,7 @@ const getVerifiedUsers_1 = require("./getVerifiedUsers");
 const adminLogin_1 = require("./adminLogin");
 const addVerifiedUser_1 = require("./addVerifiedUser");
 const deleteUser_1 = require("./deleteUser");
+const addCourse_1 = require("./addCourse");
 // user imports 
 const loginUser_1 = require("./user/loginUser");
 const adminController = (dependencies) => {
@@ -15,6 +16,7 @@ const adminController = (dependencies) => {
         DeleteVerifiedUser: (0, deleteUser_1.adminDeleteUserController)(dependencies),
         // user section 
         loginUser: (0, loginUser_1.userLoginController)(dependencies),
+        AddCourse: (0, addCourse_1.adminAddCourseController)(dependencies),
     };
 };
 exports.adminController = adminController;
