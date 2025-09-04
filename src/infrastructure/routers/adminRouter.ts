@@ -3,7 +3,7 @@ import { IAdminDependencies } from './../../application/admin/interfaces/IAdminD
 import { Router } from 'express';
 
 export const adminRoutes = (dependencies: IAdminDependencies) => {
-    const { loginAdmin,addVerifiedUser,getVerifiedUsers,DeleteVerifiedUser,loginUser,AddCourse,getCourse,getCoursebyId } = adminController(dependencies);
+    const { loginAdmin,addVerifiedUser,getVerifiedUsers,DeleteVerifiedUser,loginUser,AddCourse,getCourse,getCoursebyId,AddDetailedCourse,deleteDetailedCourse } = adminController(dependencies);
     const router = Router();
     router.route("/login").post(loginAdmin);
     router.route("/addUser").post(addVerifiedUser);
@@ -19,6 +19,10 @@ export const adminRoutes = (dependencies: IAdminDependencies) => {
         router.route("/addCourse").post(AddCourse);
         router.route("/getCourse").get(getCourse);
         router.route("/getCourseById/:id").get(getCoursebyId);
+
+
+        router.route("/addLesson").post(AddDetailedCourse);
+        router.route("/DeleteDetailedCourse/:id").delete(deleteDetailedCourse);
 
 
 

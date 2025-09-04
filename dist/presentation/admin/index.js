@@ -21,3 +21,5 @@ __exportStar(require("./controllers/deleteUser"), exports);
 __exportStar(require("./controllers/user/loginUser"), exports);
 __exportStar(require("./controllers/addCourse"), exports);
 __exportStar(require("./controllers/getCourse"), exports);
+__exportStar(require("./controllers/addDetailedCourse"), exports);
+__exportStar(require("./controllers/deleteDetailedCourse"), exports);

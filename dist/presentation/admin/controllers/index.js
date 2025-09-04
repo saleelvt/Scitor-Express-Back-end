@@ -8,6 +8,8 @@ const deleteUser_1 = require("./deleteUser");
 const addCourse_1 = require("./addCourse");
 const getCourse_1 = require("./getCourse");
 const getCourseByid_1 = require("./getCourseByid");
+const addDetailedCourse_1 = require("./addDetailedCourse");
+const deleteDetailedCourse_1 = require("./deleteDetailedCourse");
 // user imports 
 const loginUser_1 = require("./user/loginUser");
 const adminController = (dependencies) => {
@@ -21,6 +23,8 @@ const adminController = (dependencies) => {
         AddCourse: (0, addCourse_1.adminAddCourseController)(dependencies),
         getCourse: (0, getCourse_1.adminGetCourseController)(dependencies),
         getCoursebyId: (0, getCourseByid_1.adminGetCoursebyIdController)(dependencies),
+        AddDetailedCourse: (0, addDetailedCourse_1.adminAddDetailedCourseController)(dependencies),
+        deleteDetailedCourse: (0, deleteDetailedCourse_1.adminDeleteDetailedCourseByIdController)(dependencies)
     };
 };
 exports.adminController = adminController;

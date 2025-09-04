@@ -6,6 +6,8 @@ import { adminDeleteUserController } from './deleteUser';
 import { adminAddCourseController } from './addCourse';
 import { adminGetCourseController } from './getCourse';
 import { adminGetCoursebyIdController } from './getCourseByid';
+import { adminAddDetailedCourseController } from './addDetailedCourse';
+import { adminDeleteDetailedCourseByIdController } from './deleteDetailedCourse';
 
 
 
@@ -32,6 +34,10 @@ export const adminController = (dependencies: IAdminDependencies) => {
         AddCourse:adminAddCourseController(dependencies),
         getCourse:adminGetCourseController(dependencies),
         getCoursebyId:adminGetCoursebyIdController(dependencies),
+
+
+        AddDetailedCourse:adminAddDetailedCourseController(dependencies),
+        deleteDetailedCourse:adminDeleteDetailedCourseByIdController(dependencies)
 
     };
 };

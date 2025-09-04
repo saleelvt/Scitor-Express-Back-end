@@ -5,4 +5,6 @@ export * from "./controllers/deleteUser"
 export * from "./controllers/user/loginUser"
 export * from "./controllers/addCourse"
 export * from "./controllers/getCourse"
+export * from "./controllers/addDetailedCourse"
+export * from "./controllers/deleteDetailedCourse"
 
